@@ -3,6 +3,8 @@ angular.module('servicemodule',[])
 
   var res={};
 
+  //a get request is made to expertec website using the below function.
+
   res.getdata=function(obj)
   {
      //console.log("Entered here");  	

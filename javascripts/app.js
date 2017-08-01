@@ -1,1 +1,1 @@
-angular.module('Expertrec',['controllermodule','servicemodule']);
+angular.module('Expertrec',['controllermodule','servicemodule']);  //main modle and adding controller module and sevice module as dependencies.

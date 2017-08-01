@@ -1,49 +1,51 @@
-<div id="autocomplete" style="width:100%;background-color:grey">
+<div id="autocomplete" class="container-fluid" style="width:100%;background-color:white;border:solid grey 1px;">
 
 
 <div class="row">
 
-  <div class="col-sm-4 col-md-4 col-xs-12" style="font-size:200%">
+  <div class="col-sm-4 col-md-4 col-xs-12" style="font-size:200%;">
 
-    <h1> Suggestions </h1>
+    <h4 style="margin-left:5px;margin-bottom:20px;margin-top:10px;"> Suggestions </h4> <hr>
      
-     <p ng-repeat="x in res"> {{x.suggestion}} </p>
+    <!-- <p ng-repeat="x in res" style="margin-left:10px;color:#ff0000 ;"> {{x.suggestion}} </p>-->
+
+     <ul>
+        <li ng-repeat="x in res" style="margin-bottom:7px;list-style:none;"> 
+        <a href="#" style="text-decoration:none;color:red;font-family: Arial" onMouseOver="this.style.color='#0000FF';" 
+   onMouseOut="this.style.color='#FF0000';"> {{x.suggestion}} </a> </li>
+     </ul>
+
+        <!-- hover option for html pages -->
 
      
-      
   </div>
   
-  <div class="col-sm-8 col-md-8 col-xs-12" style="font-size:150%">
+  <div class="col-sm-8 col-md-8 col-xs-12" style="font-size:150%;">
   
-  <!-- <p> adithya </p> -->
-
-   <h1> Recommended products </h1>
+  
+ 
+   <h4 style="margin-left:5px;margin-bottom:20px;margin-top:10px;"> Recommended products </h4> <hr>
   
     <div class="row">
     
-
-
-      <div class="col-sm-6 col-xs-12" style="margin-bottom:10px;" ng-repeat="x in res1">
+       <div class="col-sm-6 col-xs-12" style="margin-bottom:25px;" ng-repeat="x in res1">
         
           <div class="row">
           
-            <div class="col-sm-5 col-xs-6">
+            <div class="col-sm-6 col-xs-6">
              
               <a href="#"> <img src="{{x.thumbnail}}" alt="First-Image" style="margin-left:10px;height:79px;width:80px" /> </a>
-              
-
-
-            </div>
+             </div>
             
             
             
-             <div class="col-sm-5 col-xs-6">
+             <div class="col-sm-6 col-xs-6">
              
-               <p> {{x.name}} </p>
+               <p style="height:25px;width:100%;font-family: Arial;overflow: hidden;text-overflow: ellipsis;"><b>{{x.name}}</b></p>
                
                 <img src="icon.png" alt="second-image" style="width:30%;height:40%;"> </img>
                 
-                <img src="icon.png" alt="Third-image" style="width:30%;height:40%"> </img>
+                <img src="icon.png" alt="Third-image" style="width:30%;height:40%;"> </img>
               
              </div>
          

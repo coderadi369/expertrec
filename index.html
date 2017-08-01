@@ -15,9 +15,20 @@
       
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-   <script src="javascripts/app.js" type="text/javascript"></script>
+   
+   <!--Loaded all the required js,jquery and Bootsrap files Above -->
+
+
+   <!-- Below three javascripts files implement main module,controllers and services in the Present  Application -->
+
+   <script src="javascripts/app.js" type="text/javascript"></script>         
    <script src="javascripts/controller.js" type="text/javascript"></script>
    <script src="javascripts/service.js" type="text/javascript"></script>
+
+   
+
+
+
  </head>
  <body>
    <div class="search" ng-controller="searchcontroller">
@@ -28,10 +39,14 @@
   
      <div class="input-group" style="width:80%;margin:30px auto;font-size:6;">
           <div class="search-box" style="height:30px;">
-            <input type="text" style="width:60%;height:100%" class="form-control" placeholder="Search" name="srch-term" id="srch-term" ng-model="input" ng-keyup="getsearchparameters()" />
-            <input type="button" value="Search" style="height:100%"/>
+            <input type="text" style="width:60%;height:100%;margin-right:5px;" class="form-control" placeholder="Search" name="srch-term" id="srch-term" ng-model="input" ng-keyup="getsearchparameters()" />
+            <input type="button" value="Search" style="height:100%;width:45px;font-size:150%;"/>
            </div>
-           <datadisplay ng-show="input.length" res=items res1=items1></datadisplay>      
+           <div ng-if="input.length>0">
+           <datadisplay ng-show="display" res=items res1=items1></datadisplay>
+           </div>                                                                           <!-- this directive is displayed only when  
+                                                                                               user types something in the input search box  this is done by using ng-if directive and ng-show directive -->
+
      </div>         
 
 
