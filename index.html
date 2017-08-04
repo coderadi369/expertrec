@@ -4,17 +4,24 @@
      <meta charset = "utf-8">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
     <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-   <script src="lib/angular.min.js" type="text/javascript"> </script>
+   
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"> </script>
    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css"></link>
    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+      <script src="lib/angular.min.js" type="text/javascript"> </script>
       
       <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+      
+
+      <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
+
+
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
    
    <!--Loaded all the required js,jquery and Bootsrap files Above -->
 
@@ -25,27 +32,23 @@
    <script src="javascripts/controller.js" type="text/javascript"></script>
    <script src="javascripts/service.js" type="text/javascript"></script>
 
-   
-
+   <link rel="stylesheet" type="text/css" href="style.css">
 
 
  </head>
  <body>
-   <div class="search" ng-controller="searchcontroller">
+   <div class="search" ng-controller="Maincontroller">
    
 
-   
-
-  
-     <div class="input-group" style="width:80%;margin:30px auto;font-size:6;">
-          <div class="search-box" style="height:30px;">
-            <input type="text" style="width:60%;height:100%;margin-right:5px;" class="form-control" placeholder="Search" name="srch-term" id="srch-term" ng-model="input" ng-keyup="getsearchparameters()" />
+      <div class="input-group" style="width:80%;margin:30px auto;font-size:6;">
+        
+        <div class="search-box" style="height:30px;">
+            <input type="text" style="width:60%;height:100%;margin-right:5px;" class="form-control" placeholder="Search" name="srch-term" id="srch-term" ng-model="input"  ng-click="show()" />
             <input type="button" value="Search" style="height:100%;width:45px;font-size:150%;"/>
-           </div>
-           <div ng-if="input.length>0">
-           <datadisplay ng-show="display" res=items res1=items1></datadisplay>
-           </div>                                                                           <!-- this directive is displayed only when  
-                                                                                               user types something in the input search box  this is done by using ng-if directive and ng-show directive -->
+        </div>
+  
+
+
 
      </div>         
 

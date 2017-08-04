@@ -1,0 +1,414 @@
+html
+  {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body
+  {
+    background-color:white;
+    font-size: 26px;
+    font-family:Helvetica,Arial,sans-serif;
+    
+  }
+
+ 
+  .form-group
+  {
+    width:100%;
+    margin-top:30px;
+
+  }
+
+
+  input[type=search] {  
+   box-sizing: border-box;
+    -webkit-appearance: none;          /* Irrelevant, I guess */
+}
+
+  input
+  {
+    width:80%;
+    height:50px;
+    border:none;
+    background-image: initial;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    color: rgba(0,0,0,.4);
+  }
+
+  #close
+  {
+    position:fixed;
+    right:30px;
+    top:10px;
+  }
+
+  .search-content
+  {
+    width:100%;
+    height: calc(110vh - 190px);
+    overflow-y:auto;
+    overflow-x:hidden;
+    pointer-events:auto;
+  }
+
+  .search-content::-webkit-scrollbar {
+    width: 2px;
+}
+
+.search-content::-webkit-scrollbar-thumb{
+     background: #ddd; 
+     border-radius: 20px;
+}
+
+.search-content::-webkit-scrollbar-track
+{
+     background: #fff;
+    border-radius: 0px;
+}
+
+
+
+ li
+{
+  list-style:none;
+  display:block;
+  margin-right:10px;
+  margin-left:0px;
+  overflow:hidden;
+}
+
+.Rec-item
+{
+  background-color:white;
+  /*height:120px; */
+  width:240px;
+  margin:5px;
+  vertical-align:top;
+  padding:5px;
+}
+
+.item
+{
+  display:inline-block;
+}
+
+.item-img
+{
+  width:40%;
+  display:inline-block;
+}
+
+
+
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+
+    .Rec-item
+    {
+      width:150px;
+    }
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+
+    .Rec-item
+    {
+      width:150px;
+    }
+
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+
+    .Rec-item
+    {
+      width:150px;
+    }
+
+
+}
+
+/* ----------- Galaxy S4 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+    .Rec-item
+    {
+      width:150px;
+    }
+
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+    .Rec-item
+    {
+      width:150px;
+    }
+
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+  .Rec-item
+    {
+      width:150px;
+    }
+
+
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+  .Rec-item
+    {
+      width:150px;
+    }
+
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+    .Rec-item
+    {
+      width:150px;
+    }
+
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+  .Rec-item
+    {
+      width:150px;
+      
+
+    }
+
+
+}
+
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+   .Rec-item
+   {
+      width:140px;
+   }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+      .Rec-item
+   {
+      width:140px;
+   }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+  .Rec-item
+   {
+      width:140px;
+   }
+
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+      .Rec-item
+   {
+      width:140px;
+   }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .Rec-item
+   {
+      width:140px;
+   }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+     .Rec-item
+   {
+      width:140px;
+   }
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    .Rec-item
+   {
+      width:140px;
+   }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+  .Rec-item
+   {
+      width:140px;
+   }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+    .Rec-item
+   {
+      width:140px;
+   } 
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+  .Rec-item
+   {
+      width:140px;
+   }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+    .Rec-item
+   {
+      width:140px;
+   }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+    .Rec-item
+   {
+      width:140px;
+   }
+}

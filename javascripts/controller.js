@@ -15,18 +15,27 @@ angular.module('controllermodule',[])
 	};
 
 })
-.controller('searchcontroller',function($scope,Itemslist)
+.controller('searchcontroller',function($scope,Itemslist,close)
 {
 
   // this the only controller present in the page. This controller is responsible for collecting data 
 
   // using the factory Items and passing it on to the template.
 
+  console.log("search controller called");
+
  $scope.items=[]
 
  $scope.display=0;  //this variable is used to find out whether we have received a non empty list for the query parameter or not.
 
  //if the value of display is zero,then we will not be displaying the drop down bar.
+
+
+  $scope.close=function(result)
+  {
+  	console.log("close the modal");
+  	close(result);
+  }
 
 
 
@@ -62,9 +71,11 @@ angular.module('controllermodule',[])
 				$scope.display=0;
 			}
 
+          console.log($scope.display)
 			
 			
 		});
+
 	required_data.catch(function(data, status, headers, config) {
             
 			console.log("Failure function called");
@@ -78,4 +89,29 @@ angular.module('controllermodule',[])
 
   //console.log($scope.input.searchterm)
  
+})
+.controller('Maincontroller',function($scope,ModalService){
+
+      $scope.show=function()
+      {
+          console.log("Entered here");
+           ModalService.showModal({
+            templateUrl: 'practice.html',
+            controller: 'searchcontroller'
+        }).then(function(modal) {
+            modal.element.modal();
+            modal.close.then(function(result) {
+               
+           });               
+
+
+          });
+
+      };
+
+      $scope.show1=function()
+      {
+      	console.log("Entered here too");
+      }
+
 });
